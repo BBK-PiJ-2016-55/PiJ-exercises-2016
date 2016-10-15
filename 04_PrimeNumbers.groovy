@@ -1,22 +1,18 @@
-Integer i = 2
-println "Please enter a number: "
-String s = System.console().readLine()
-Integer n = Integer.parseInt(s)
+int i = 1
 boolean finished = false
 boolean prime = true 
+println "Please enter a number: "
+String s = System.console().readLine()
+int n = Integer.parseInt(s)
 	while (!finished) {
-		if ((i == (n - 1)) || ((n < 4) && (n > 0))) {
+		i++
+		if (i >= n) {
 			finished = true
-			} else {			
-			if ((n % i) == 0) {
-				finished = true
-				prime = false
-				} else {
-				i++
-				}
-			}
+		} else if ((n % i) == 0) {
+			finished = true
+			prime = false
 		}
-
+		}
 if (!prime) {
 	println "The number " + n + " is not Prime"
 	} else {
