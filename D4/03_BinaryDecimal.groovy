@@ -1,15 +1,18 @@
-power()
+int power(int b, int e) {
+	int total = b
+	for (i = 1; i < e; i++) {
+		total = total * b
+	}
+	return total
+}
 
-int power(int, int) {
-	println "Enter your base: "
-	String str = System.console().readLine();
-	double base = Integer.parseInt(str);
-	println "Enter your exponent: "
-	str = System.console().readLine();
-	double exponent = Integer.parseInt(str);
-	double result = Math.pow(base, exponent);
-	println result;
-	return result
-} 
+println "Enter your base: "
+String str = System.console().readLine();
+int b = Integer.parseInt(str);
+println "Enter your exponent: "
+str = System.console().readLine();
+int e = Integer.parseInt(str);
+int result = power(b,e)
+println result
 
-println result;
+
