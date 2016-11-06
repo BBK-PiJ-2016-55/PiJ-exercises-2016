@@ -29,14 +29,23 @@ void moveTo(Point otherPoint){
 	this.y = otherPoint.y
 }
 
-/*
+
 // Returns a copy of the current point with the same coordinates`
-double clone(){
+Point clone(){
+	Point clonePoint = new Point()
+	clonePoint.x = this.x
+	clonePoint.y = this.y
+	return clonePoint
 }
 
-// Returns a copy of the current point with the cooridnates * by -1
-double opposite(){
-} */
+
+// Returns a copy of the current point with the coordinates * by -1
+Point opposite(){
+	Point oppositePoint = new Point()
+	oppositePoint.x = (this.x * - 1)
+	oppositePoint.y = (this.y * - 1)
+	return oppositePoint
+} 
 
 }
 
@@ -48,20 +57,28 @@ Point secondPoint = new Point();
 secondPoint.x = 7;
 secondPoint.y = -3;
 
-// double distanceBetween = firstPoint.distanceTo(secondPoint)
-// println "Distance between firstPoint and secondPoint is " + distanceBetween
+double distanceBetween = firstPoint.distanceTo(secondPoint)
+println "Distance between firstPoint and secondPoint is " + distanceBetween
 
-// double distanceOrigin = firstPoint.distanceToOrigin()
-// println "Distance between firstPoint and origin is " + distanceOrigin
+double distanceOrigin = firstPoint.distanceToOrigin()
+println "Distance between firstPoint and origin is " + distanceOrigin
 
-/* println "Enter new x coordinate for firstPoint: "
-String str = System.console().readLine()
-double firstX = Integer.parseInt(str)
-println "Enter new y coordinate for firstPoint: "
-str = System.console().readLine()
-double firstY = Integer.parseInt(str)
-firstPoint.moveTo(firstX, firstY) */
+firstPoint.moveTo(5, 9)
+println "firstPoint.x moved to: " + firstPoint.x
+println "firstPoint.y moved to: " + firstPoint.y
 
 firstPoint.moveTo(secondPoint)
 println "New value of x for firstPoint is " + firstPoint.x
 println "New value of y for firstPoint is " + firstPoint.y
+
+Point thirdPoint = new Point() 
+thirdPoint = firstPoint.clone();
+println "thirdPoint is a clone of firstPoint."
+println "thirdPoint.x = " + thirdPoint.x
+println "thirdPoint.y = " + thirdPoint.y
+
+Point fourthPoint = new Point() 
+fourthPoint = firstPoint.opposite();
+println "fourthPoint is a mirror of firstPoint."
+println "fourthPoint.x = " + fourthPoint.x
+println "fourthPoint.y = " + fourthPoint.y
