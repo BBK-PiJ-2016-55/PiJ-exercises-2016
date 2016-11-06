@@ -26,7 +26,22 @@ int binary2decimal(String binNo) {
 	return total
 }
 
-println "Enter your binary number: "
+String decimal2binary(int decNo) { 
+	String resultString = ""
+	while (decNo != 0) {
+		resultString = resultString + (decNo % 2)
+		decNo = (decNo / 2)
+	}
+	String reverseResultString = ""
+	int stringLength = resultString.length()
+	for (c = (stringLength - 1); c >= 0; c--){
+		reverseResultString = reverseResultString + resultString.charAt(c)
+	}
+	return reverseResultString
+}
+
+println "Enter your decimal number: "
 String str = System.console().readLine();
-int result = binary2decimal(str)
+int n = Integer.parseInt(str)
+String result = decimal2binary(n)
 println result
