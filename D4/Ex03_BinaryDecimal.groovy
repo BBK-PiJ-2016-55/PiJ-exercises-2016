@@ -40,8 +40,21 @@ String decimal2binary(int decNo) {
 	return reverseResultString
 }
 
-println "Enter your decimal number: "
+println "Enter 1 to convert binary to decimal."
+println "Enter 2 to convert decimal to binary."
 String str = System.console().readLine();
-int n = Integer.parseInt(str)
-String result = decimal2binary(n)
-println result
+int choice = Integer.parseInt(str)
+if (choice == 1) {
+	println "Enter binary number: "
+	str = System.console().readLine();
+	int decimalResult = binary2decimal(str)
+	println decimalResult
+} else if (choice == 2) {
+	println "Enter decimal number: "
+	str = System.console().readLine();
+	int decNo = Integer.parseInt(str)
+	String binaryResult = decimal2binary(decNo)
+	println binaryResult
+} else {
+	println "Invalid input, try again."
+}
