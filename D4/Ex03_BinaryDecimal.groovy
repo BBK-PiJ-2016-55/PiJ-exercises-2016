@@ -13,9 +13,10 @@ int power2(int e) {
 
 int binary2decimal(String binNo) {
 	int total = 0
-	for (c = 0; c < binNo.length(); c++){
+	int inputLength = binNo.length()
+	for (c = 0; c < inputLength; c++){
 		if (binNo.charAt(c) == "1"){
-		total = total + power2((binNo.length() - 1) - c)
+		total = total + power2((inputLength - 1) - c)
 		}
 		 	
 	} 
