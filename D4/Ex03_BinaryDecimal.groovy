@@ -1,7 +1,11 @@
 int power(int b, int e) {
 	int total = b
-	for (i = 1; i < e; i++) {
-		total = total * b
+	if (e == 0) {
+		total = 1
+	} else {
+		for (i = 1; i < e; i++) {
+			total = total * b
+		}
 	}
 	return total
 }
@@ -18,7 +22,6 @@ int binary2decimal(String binNo) {
 		if (binNo.charAt(c) == "1"){
 		total = total + power2((inputLength - 1) - c)
 		}
-		 	
 	} 
 	return total
 }
