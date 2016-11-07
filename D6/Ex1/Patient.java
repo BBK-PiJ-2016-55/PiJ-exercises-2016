@@ -24,9 +24,4 @@ public class Patient {
 		return this.nextPatient;	
 	}
 	
-	
-	
-	// other methods come here, including getters / setters
-
-	
 }
