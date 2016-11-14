@@ -23,7 +23,8 @@ public class SupermarketQueue implements PersonQueue {
 		public Person retrieve(){
 		if (firstPerson == null) {
 			// Check if queue is empty - no-one to serve
-			System.out.println("No-one to delete");
+			System.out.println("No-one to retrieve");
+			return null;
 		}
 		
 		Person current = firstPerson;
