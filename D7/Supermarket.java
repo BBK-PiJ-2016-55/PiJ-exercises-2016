@@ -12,7 +12,12 @@ public class Supermarket {
 		Person personThree = new Person("Bob");
 		myQueue.insert(personThree);
 		
-		myQueue.retrieve();
-	
+		Person nextCustomer = myQueue.retrieve();
+		System.out.println(nextCustomer.getPersonName());
+		nextCustomer = myQueue.retrieve();
+		System.out.println(nextCustomer.getPersonName());
+		nextCustomer = myQueue.retrieve();
+		System.out.println(nextCustomer.getPersonName());
+		nextCustomer = myQueue.retrieve();
 	}
 }
