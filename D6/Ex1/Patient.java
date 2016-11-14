@@ -8,7 +8,7 @@ public class Patient {
 		this.name = name;
 		this.age = age;
 		this.illness = illness;
-		this.nextPatient = null; // Pointer to another patient!
+		this.nextPatient = null;
 	}
 	
 	public void setNextPatient(Patient newPatient) {
@@ -20,7 +20,6 @@ public class Patient {
 	}
 	
 	public Patient getNextPatient() {
-		System.out.println(this.name);
 		return this.nextPatient;	
 	}
 	
