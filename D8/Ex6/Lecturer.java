@@ -1,8 +1,9 @@
 /**
 * A lecturer has both teaching and research responsibilities
 */
-public class Lecturer {
-	private Teacher teacher = new Teacher("Boberta");
+public class Lecturer{
+	public Teacher teacher = new Teacher("Boberta");
+	
 	
 	public void teach(String lessonName){
 		teacher.teach(lessonName);
