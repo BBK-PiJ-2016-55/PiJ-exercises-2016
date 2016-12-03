@@ -34,7 +34,7 @@ public class MobilePhone extends OldPhone {
 	public void call(String number){
 		super.call(number);
 		addNumber(number);
-	}
+	} 
 	
 	/**
 	* Remembers last 10 numbers called
