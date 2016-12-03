@@ -6,7 +6,8 @@ public class PhoneLauncher {
 	}
 
 	public static void makePhone() {
-		SmartPhone myPhone = new SmartPhone("Nokia");	
+		// MobilePhone myPhone = new MobilePhone("Nokia");	
+		SmartPhone myPhone = new SmartPhone("Samsung"); 
 		myPhone.call("01253894851");
 		myPhone.call("01253894852");
 		myPhone.call("01253894853");
@@ -34,11 +35,13 @@ public class PhoneLauncher {
 		smartphone.call("01253894951");
 		smartphone.playGame("Merkin");
 		smartphone.browseWeb("someotheraddress.com");
-		// phone.ringAlarm("0630");
-		// phone.printLastNumbers();
+		smartphone.ringAlarm("0630");
+		smartphone.printLastNumbers();
 
 	}
 
+	// 2.4 - can't pass MobilePhone to testPhone without getting 
+	// ClassCastException: MobilePhone cannot be cast to SmartPhone
 
 
 }
