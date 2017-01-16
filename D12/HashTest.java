@@ -7,13 +7,17 @@ public class HashTest {
 	@Before
 	public void setUp(){
 		hu = new HashUtilities();
+		System.out.println("made it to the end of setup");
 	}
 	
 	@Test
 	public void testHighVol() {
-		int input = 10;
-		int output = hu.shortHash(input);
+		String str = "10";
+		int hash = str.hashCode();
+		int output = hu.shortHash(hash);
 		int expected = 567;
+		System.out.println("expected: " + expected);
+		System.out.println("output: " + output);
 		assertEquals(expected, output);		
 	}
 }
