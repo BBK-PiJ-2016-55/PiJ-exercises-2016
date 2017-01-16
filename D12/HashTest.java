@@ -12,12 +12,17 @@ public class HashTest {
 	
 	@Test
 	public void testHighVol() {
-		String str = "10";
-		int hash = str.hashCode();
-		int output = hu.shortHash(hash);
-		int expected = 567;
-		System.out.println("expected: " + expected);
-		System.out.println("output: " + output);
-		assertEquals(expected, output);		
+		String strInt;
+		boolean allPassed = true;
+		for (int i = 0; i < 2000; i++) {
+			strInt = "" + i;
+			int hash = strInt.hashCode();
+			int output = hu.shortHash(hash);
+			int expected = Math.abs(hash % 1000);
+			if (expected != output) {
+				allPassed = false;
+			}	
+		}
+	assertTrue(allPassed);	
 	}
 }
