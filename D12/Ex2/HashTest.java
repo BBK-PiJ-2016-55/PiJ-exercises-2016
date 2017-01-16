@@ -7,7 +7,6 @@ public class HashTest {
 	@Before
 	public void setUp(){
 		hu = new HashUtilities();
-		System.out.println("made it to the end of setup");
 	}
 	
 	@Test
