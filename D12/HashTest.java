@@ -11,7 +11,7 @@ public class HashTest {
 	}
 	
 	@Test
-	public void testHighVol() {
+	public void testHighVolMatch() {
 		String strInt;
 		boolean allPassed = true;
 		for (int i = 0; i < 2000; i++) {
@@ -24,5 +24,20 @@ public class HashTest {
 			}	
 		}
 	assertTrue(allPassed);	
+	}
+	
+	@Test
+	public void testHighVolRange() {
+		String strInt;
+		for (int i = 1; i < 2000; i++) {
+			boolean allPassed = true;
+			strInt = "" + i;
+			int hash = strInt.hashCode();
+			int output = hu.shortHash(hash);
+			if (!(output > 0 && output < 1000)) {
+				allPassed = false;
+			}
+			assertTrue(allPassed);
+		}
 	}
 }
