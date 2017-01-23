@@ -10,12 +10,14 @@ public class PrintAverage {
 	}
 	
 	public void getAverage() {
-		for (int i = 0; i < 10; i++) {
+		System.out.println("How many numbers do you want?");
+		int maxInput = requestNumber();
+		for (int i = 0; i < maxInput; i++) {
 			int n = requestNumber();
 			total = total + n; 
 		}
-		int ave = (total / 10);
-		System.out.println("Average of ten number input is: " + ave);
+		int ave = (total / maxInput);
+		System.out.println("Average of numbers input is: " + ave);
 	}
 	
 	public int requestNumber() {
