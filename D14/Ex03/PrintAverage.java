@@ -10,7 +10,7 @@ public class PrintAverage {
 	}
 	
 	public void getAverage() {
-		System.out.println("How many numbers do you want?");
+		System.out.println("How many numbers do you want to find the average of?");
 		int maxInput = requestNumber();
 		for (int i = 0; i < maxInput; i++) {
 			int n = requestNumber();
