@@ -8,8 +8,14 @@ public interface Library {
     /**
      * Adds new user to Library. User name must be unique.
      *
-     * @return LibraryUser added if successful, null if unsuccessful
+     * @return ID of user added if successful, null if unsuccessful
      */
-    LibraryUser addUser();
+    int addUser(String name);
 
+    /**
+     * Gets name of current library
+     *
+     * @return Library name
+     */
+    String getName();
 }

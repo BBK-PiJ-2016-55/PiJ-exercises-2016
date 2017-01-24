@@ -5,11 +5,13 @@
  */
 public class LibraryImpl implements Library {
 
-	LibraryUser[] = new LibraryUser[10]; 
+	LibraryUser[] newUser = new LibraryUser[10]; 
 
-    public LibraryUser addUser(String name) {
-    	
+    public int addUser(String name) {
+    	return 123;
     }
 
-
+    public String getName() {
+    	return "Library Name";
+    }
 }

@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 public class LibraryUserImplTest {
 	LibraryUser u;
 	String name = "Maya"; 
+	int libraryId;
+	Library library;
 
 	@Before
 	public void setUp(){
@@ -17,9 +19,16 @@ public class LibraryUserImplTest {
 	}
 
 	@Test
-	public void testUniqueUserName() {
-		LibraryUser u2 = new LibraryUserImpl("Maya");
-		assertEquals(retName, name);
+	public void testRegister() {
+		library = new LibraryImpl();
+		libraryId = u.register(library);
+		assertEquals(libraryId, 123);
+	}
+
+	@Test
+	public void testGetLibrary() {
+		String libName = u.getLibrary();
+		assertEquals(libName, "Library Name");
 	}
 
 }

@@ -15,7 +15,14 @@ public interface LibraryUser {
      *
      * @return libraryID
      */
-    String getId();
+    int register(Library library);
+
+    /**
+     *
+     * @return library name
+     */
+    String getLibrary();
+
 
 }
 

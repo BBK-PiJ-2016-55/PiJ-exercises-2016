@@ -5,6 +5,8 @@
  */
 public class LibraryUserImpl implements LibraryUser {
 	private String name;
+	private int libraryId;
+	private Library library = new LibraryImpl();
 
 	public LibraryUserImpl(String name) {
 		this.name = name;
@@ -14,8 +16,15 @@ public class LibraryUserImpl implements LibraryUser {
     	return name;
     }
 
-    public String getId() {
-    	return "";
+    public int register(Library lib) {
+    	library = lib;
+    	libraryId = lib.addUser(name);
+    	return libraryId;
     }
+
+    public String getLibrary() {
+    	return library.getName();
+    }
+
 
 }
