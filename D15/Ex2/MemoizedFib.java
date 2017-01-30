@@ -1,27 +1,44 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.time.Duration;
+import java.time.Instant;
+
 public class MemoizedFib {
+	static Map<Long,Long> storedResults = new HashMap<>();
 	
-	public int recursiveFibonacci(int n) {
+	public static void main(String[] args) {
+		final int inputInt = 40;
+		
+		Instant start = Instant.now();
+		System.out.println("Recursive: " + recFib(inputInt));
+		Instant stop = Instant.now();
+		System.out.println("Time for recursive fib: " + Duration.between(start, stop).toNanos());
+		
+		start = Instant.now();
+		System.out.println("Memoized: " + memoFib(inputInt));
+		stop = Instant.now();
+		System.out.println("Time for memoized fib: " + Duration.between(start, stop).toNanos());
+		
+	}
+	
+	public static long recFib(long n) {
 		if ((n == 1) || (n == 2)) {
         	return 1;
         } else {
-			int result = recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
-            return result;
+			long result = recFib(n - 1) + recFib(n - 2);
+			return result;
         }
 	}
 
-	public int iterativeFibonacci(int n) {
+	public static long memoFib(long n) {
 		if ((n == 1) || (n == 2)) {
         	return 1;
-        } else {
-		int result = 0;
-		int lastFib1 = 1;
-		int lastFib2 = 1;
-		for (int i = 3; i <= n; i++) {
-			result = lastFib1 + lastFib2;
-			lastFib1 = lastFib2;
-			lastFib2 = result;
+        } else if (storedResults.containsKey(n)) {
+			return storedResults.get(n);
+		} else {
+			long result = memoFib(n - 1) + memoFib(n - 2);
+            storedResults.put(n, result);
+			return result;
 		}
-		return result;
 		}
 	}
-}
