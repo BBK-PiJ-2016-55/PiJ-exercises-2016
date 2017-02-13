@@ -1,20 +1,26 @@
+package Ex02;
+
 import java.io.File;
 import java.util.Scanner;
 
 public class MakeDir {
-
+	private File dir;
+	
 	public static void main(String[] args) {
-		File dir;
-		System.out.println("Enter a directory name: ");
-		Scanner scanner = new Scanner(System.in);
-		String userStr = scanner.next();
-		dir = new File(userStr);
-		System.out.println(dir.mkdir());
+		MakeDir md = new MakeDir();
+		md.createDir();
+	}
+		
+	public void createDir() {
+		try {
+			System.out.println("Enter a directory name: ");
+			Scanner scanner = new Scanner(System.in);
+			String userStr = scanner.next();
+			dir = new File(userStr);
+			System.out.println(dir.mkdir());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	/* public boolean createDir(String s) {
-		// String dirName = ".";
-		dir = new File(s);
-		return dir.mkdir();
-	} */
 }
