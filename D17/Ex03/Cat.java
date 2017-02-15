@@ -23,15 +23,13 @@ public class Cat {
 		} else {
 			try (BufferedReader in = new BufferedReader(new FileReader(myFile))) {		
 			String line = in.readLine();
-			while (line != null) {
+			while ((line = in.readLine()) != null) {
 				System.out.println(line);
-				line = in.readLine();
 			}
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
-
 	}
 }
 	
