@@ -88,6 +88,7 @@ public class IntegerTreeNode {
     }
 
     public int depth() {
+        // todo
         return 0;
     }
 
