@@ -45,20 +45,23 @@ public class IntegerTreeNode {
 
     // Returns max value stored in tree
     public int getMax() {
-        // if both child nodes are null, return value
-        if (this.right == null && this.left == null) {
+        // if right child is null, return value
+        if (this.right == null) {
             return value;
-        } else if (this.right == null) {
-        // else if there is no right child, go left
-            this.left.getMax();
         } else {
-            this.right.getMax();
+        // else recursively go right and repeat
+            return right.getMax();
         }
-        return value;
+
     }
 
     // Returns min value stored in tree
-    public void getMin() {
-
+    public int getMin() {
+        if (this.left == null) {
+            return value;
+        } else {
+            // else recursively go left and repeat
+            return left.getMin();
+        }
     }
 }
