@@ -68,6 +68,22 @@ public class IntegerTreeNode {
     // return a representation of tree in String form
     @Override
     public String toString() {
-        return "";
+        String retString = "";
+        // Adds value of current node to string
+        retString += "[" + String.valueOf(value) + " ";
+        // if no child nodes on left:
+        if (left == null) {
+            retString += "L[]";
+        } else {
+            retString += "L" + left.toString();
+        }
+        // if no child nodes on right:
+        if (right == null) {
+            retString += "R[]";
+        } else {
+            retString += "R" + right.toString();
+        }
+        retString += "]";
+        return retString;
     }
 }
