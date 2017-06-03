@@ -3,7 +3,7 @@ package Ex6;
 /**
 * A lecturer has both teaching and research responsibilities
 */
-public class Lecturer{
+public class Lecturer {
 	public Teacher teacher = new Teacher("Boberta");
 	
 	
