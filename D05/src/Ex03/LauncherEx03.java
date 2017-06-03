@@ -1,6 +1,6 @@
 package Ex03;
 
-public class Launcher {
+public class LauncherEx03 {
     public static void main(String[] args){
         int[] src = new int[6];
         src[0] = 1;

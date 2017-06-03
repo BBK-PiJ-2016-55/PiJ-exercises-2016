@@ -1,11 +1,13 @@
+package Ex07;
+
 public class PlaneGame {
 	public static void main(String[] args){
 		PlaneGame game = new PlaneGame();
 		game.launch();
 	}
 
-	public void launch() {
-		boolean playAgain = false;
+	private void launch() {
+		boolean playAgain;
 
 		do {
 		boolean finished = false;

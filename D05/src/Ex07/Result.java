@@ -1,3 +1,5 @@
+package Ex07;
+
 public enum Result {
 	HIT,
 	FAIL_LEFT,
@@ -6,5 +8,5 @@ public enum Result {
 	FAIL_LOW,
 	FAIL_SHORT,
 	FAIL_LONG,
-	OUT_OF_RANGE;
+	OUT_OF_RANGE
 }
