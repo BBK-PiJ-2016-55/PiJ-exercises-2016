@@ -23,15 +23,21 @@ public class BubbleSort {
     unsortedList.add(54);
     unsortedList.add(3);
     unsortedList.add(17);
-    unsortedList.add(55);
-    unsortedList.add(3);
-    unsortedList.add(2);
-    unsortedList.add(99);
+    unsortedList.add(500);
+    unsortedList.add(1);
+    unsortedList.add(67);
+    unsortedList.add(34);
+    unsortedList.add(65);
+    unsortedList.add(8);
 
+    long startTime = System.currentTimeMillis();
     List<Integer> sortedList = bubbleSort(unsortedList);
+    long runTime = System.currentTimeMillis() - startTime;
+    System.out.println("Runtime: " + runTime);
 
+    System.out.print("Sorted list: ");
     for (Integer i : sortedList) {
-      System.out.println(i);
+      System.out.print(i + " ");
     }
 
   }
