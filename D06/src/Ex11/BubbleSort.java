@@ -14,11 +14,10 @@ import java.util.List;
  */
 public class BubbleSort {
   private static List<Integer> unsortedList = new LinkedList<>();
-  // private static List<Integer> sortedList = new LinkedList<>();
 
   public static void main(String[] args) {
 
-    for (int c = 1; c < 50; c++) {
+    for (int c = 1; c < 100; c++) {
       unsortedList.add((int) (Math.random() * 100 + 1));
     }
 
