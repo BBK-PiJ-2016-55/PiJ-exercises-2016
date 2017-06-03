@@ -17,23 +17,15 @@ public class BubbleSort {
   // private static List<Integer> sortedList = new LinkedList<>();
 
   public static void main(String[] args) {
-    unsortedList.add(5);
-    unsortedList.add(32);
-    unsortedList.add(1);
-    unsortedList.add(54);
-    unsortedList.add(3);
-    unsortedList.add(17);
-    unsortedList.add(500);
-    unsortedList.add(1);
-    unsortedList.add(67);
-    unsortedList.add(34);
-    unsortedList.add(65);
-    unsortedList.add(8);
+
+    for (int c = 1; c < 50; c++) {
+      unsortedList.add((int) (Math.random() * 100 + 1));
+    }
 
     long startTime = System.currentTimeMillis();
     List<Integer> sortedList = bubbleSort(unsortedList);
     long runTime = System.currentTimeMillis() - startTime;
-    System.out.println("Runtime: " + runTime);
+    System.out.println("Runtime: " + runTime + " milliseconds");
 
     System.out.print("Sorted list: ");
     for (Integer i : sortedList) {
