@@ -21,6 +21,12 @@ public class NoahsArk {
     Beetle beetle = new Beetle("John");
     beetle.call();
     beetle.reproduce();
-    System.out.println();
+
+    cat.makeSound();
+    frog.makeSound();
+    whale.makeSound();
+    salmon.makeSound();
+    eagle.makeSound();
+    beetle.makeSound();
   }
 }
