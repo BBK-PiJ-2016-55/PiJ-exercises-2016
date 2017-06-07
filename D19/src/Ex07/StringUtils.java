@@ -31,7 +31,7 @@ public class StringUtils {
     System.out.println(eyeWords);
     System.out.println("");
 
-    List<String> upperCaseWords = StringUtils.transformedList(inList, s -> s.toUpperCase());
+    List<String> upperCaseWords = StringUtils.transformedList(inList, String::toUpperCase);
     System.out.println(upperCaseWords);
     System.out.println("");
 
