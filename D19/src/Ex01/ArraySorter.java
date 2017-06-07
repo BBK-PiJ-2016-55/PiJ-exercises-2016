@@ -47,19 +47,26 @@ public class ArraySorter {
     System.out.println("");
 
     //Strings that contain “e” first, everything else second
-    Arrays.sort(strArray, (s1, s2) -> {
-      if (s1.contains("e") && s2.contains("e")) {
-        return 0;
-      } else if (s1.contains("e")) {
-        return -1;
-      } else {
-        return 1;
-      }
-    });
-    System.out.println("Sorted with contains 'e' first using block lambda: ");
+    Arrays.sort(strArray, (s1, s2) -> ArraySorter.eChecker(s1, s2));
+    System.out.println("Sorted with contains 'e' first using external method + lambdas: ");
     System.out.println(Arrays.asList(strArray));
     System.out.println("");
 
+    //Strings that contain “e” first, everything else second
+    Arrays.sort(strArray, ArraySorter::eChecker);
+    System.out.println("Sorted with contains 'e' first using method reference: ");
+    System.out.println(Arrays.asList(strArray));
+    System.out.println("");
+  }
+
+  public static int eChecker(String s1, String s2) {
+    if (s1.contains("e") && s2.contains("e")) {
+      return 0;
+    } else if (s1.contains("e")) {
+      return -1;
+    } else {
+      return 1;
+    }
 
   }
 
